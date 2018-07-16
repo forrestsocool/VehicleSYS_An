@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:theme="@style/AppTheme"
+              android:background="@color/colorPrimary"
+              tools:context="com.yhy.drawtracedemo.activity.SettingsActivity">
+<!--android:background="@android:color/holo_blue_light"-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:logo="@drawable/toolbar_logo"
+        android:theme="@style/BitLightTheme.menuOverflowAndDrawerArrow"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <!--android:background="@android:color/holo_blue_light"-->
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutContainer"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+

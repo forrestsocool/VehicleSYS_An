@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:theme="@style/AppTheme"
+              android:background="@color/colorPrimary"
+              tools:context="com.yhy.drawtracedemo.activity.AboutActivity">
+<!--android:background="@android:color/holo_blue_light"-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:logo="@drawable/toolbar_logo"
+        android:theme="@style/BitLightTheme.menuOverflowAndDrawerArrow"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <!--android:background="@android:color/holo_blue_light"-->
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutContainer"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="128dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/about_icon"
+                android:layout_marginTop="@dimen/activity_horizontal_large_margin"
+                android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="车辆管理系统"
+                    android:textColor="@color/darkGrey"
+                    android:id="@+id/textViewAppName"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/darkGrey"
+                    android:text=" V1.0"
+                    android:id="@+id/textViewVersion"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/activity_horizontal_large_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:text="地图引擎: OsmDroid 5.6.2"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/tv_osm"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_alignLeft="@id/tv_osm"
+                    android:id="@+id/tv_google"
+                    android:layout_below="@id/tv_osm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:text="卫星地图源: 谷歌地图"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:layout_alignLeft="@id/tv_osm"
+                    android:layout_below="@id/tv_google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:text="路网地图源: 天地图"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="center_horizontal"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="CopyRight© 2017 第25基地通信团\n\n"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/darkGrey"
+                android:gravity="center_horizontal|bottom"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+

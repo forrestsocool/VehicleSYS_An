@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!--最新栏目的新闻-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout="@layout/preference_item"
+                  android:title="设置">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="数据源设置">
+        <!--<CheckBoxPreference-->
+            <!--android:key="@string/online_mode"-->
+            <!--android:layout="@layout/preference_item"-->
+            <!--android:summary="当在线地图可用时加载在线瓦片数据"-->
+            <!--android:title="加载在线地图"-->
+            <!--android:widgetLayout="@layout/switch_layout"-->
+            <!--/>-->
+        <EditTextPreference
+            android:key="@string/server_host"
+            android:layout="@layout/preference_item"
+            android:title="后台服务器地址" />
+        <EditTextPreference
+            android:key="@string/map_location"
+            android:layout="@layout/preference_item"
+            android:title="离线地图包位置" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:summary="90"
+        android:title="行车日志设置">
+        <!--<CheckBoxPreference-->
+        <!--android:key="@string/online_mode"-->
+        <!--android:layout="@layout/preference_item"-->
+        <!--android:summary="当在线地图可用时加载在线瓦片数据"-->
+        <!--android:title="加载在线地图"-->
+        <!--android:widgetLayout="@layout/switch_layout"-->
+        <!--/>-->
+        <EditTextPreference
+            android:key="@string/over_speed"
+            android:layout="@layout/preference_item"
+            android:title="超速阈值设置（km/h）"
+            android:defaultValue="90"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="其他说明">
+        <Preference
+            android:layout="@layout/preference_item"
+            android:summary="V 1.2"
+            android:title="当前版本" />
+        <!--<Preference-->
+            <!--android:layout="@layout/preference_item"-->
+            <!--android:summary="博客：http://blog.csdn.net/never_cxb"-->
+            <!--android:title="TomChen" />-->
+    </PreferenceCategory>
+
+</PreferenceScreen>

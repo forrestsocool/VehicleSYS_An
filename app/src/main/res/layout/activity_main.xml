@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:theme="@style/AppTheme"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:background="@color/colorPrimary"
+              tools:context=".MainActivity">
+    <!--android:background="@android:color/holo_blue_light"-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:logo="@drawable/toolbar_logo"
+        android:theme="@style/BitLightTheme.menuOverflowAndDrawerArrow">
+        <!--android:background="@android:color/holo_blue_light"-->
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v4.widget.DrawerLayout-->
+            <!--android:id="@+id/drawerLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@android:color/white">-->
+
+            <RelativeLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                >
+
+                <!--<android.support.design.widget.TabLayout-->
+                    <!--android:id="@+id/tab_title"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:background="@android:color/holo_blue_light"-->
+                    <!--app:tabIndicatorColor="@color/blue"-->
+                    <!--app:tabSelectedTextColor="@color/blue"-->
+                    <!--app:tabTextColor="@android:color/white" />-->
+
+                <!--<cc.bitlight.mapfour.customclass.MyViewPager-->
+                    <!--android:id="@+id/vp_pager"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<com.amap.api.maps.MapView-->
+                    <!--android:id="@+id/map"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" >-->
+                <!--</com.amap.api.maps.MapView>-->
+
+
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_track_car"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_alignParentRight="true"
+                    android:layout="@layout/switch_layout"
+                    android:text="跟踪"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_showtrace"
+                    android:layout_below="@+id/switch_track_car"
+                    android:layout_alignParentRight="true"
+                    android:layout="@layout/switch_layout"
+                    android:text="轨迹"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="24dp"
+                    android:text="  外出车辆  "
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_outcar"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="4dp"
+                    />
+                <ListView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@id/tv_outcar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/outcar_list_view"
+                    android:background="@drawable/custom_shape"/>
+            </RelativeLayout>
+
+        <!--android:background="#AAEEEEEE"-->
+
+
+        <!--<android.support.design.widget.NavigationView-->
+                <!--android:id="@+id/navigation_view"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="start"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--app:headerLayout="@layout/navigation_drawer_header"-->
+                <!--app:menu="@menu/navigation_drawer_menu" />-->
+        <!--</android.support.v4.widget.DrawerLayout>-->
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
