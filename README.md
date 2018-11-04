@@ -49,3 +49,20 @@
 ## 数据库
 
 数据库依据需求设计三个表，car表存储所有车辆固定信息，如颜色、车型、车牌、ID等。carpts存储车辆轨迹信息，用于车辆当日轨迹信息的显示。carpts_201801XX每日新建一个表，用于存储历史轨迹。
+
+
+## License
+
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+        Version 2, December 2004
+
+Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document, and changing it is allowed as long
+as the name is changed.
+
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. You just DO WHAT THE FUCK YOU WANT TO.
